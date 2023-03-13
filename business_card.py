@@ -25,9 +25,12 @@ class BusinessContact(BaseContact):
         self.company = company
         self.work_phone = work_phone
 
-
-def __str__(self):
+    def __str__(self):
         return f'{self.name}, {self.phone}, {self.email}, {self.job}, {self.company}, {self.work_phone}'
+    
+    def contact(self):
+        return (f'I am choosing number {self.work_phone} and calling to {self.name}')
+    
 
 def create_contact(kind, amount):
     if kind == BaseContact:
